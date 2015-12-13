@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mantaApp')
-  .config(function ($stateProvider) {
+  .config(function($stateProvider) {
     $stateProvider
       .state('ticket', {
         url: '/ticket',
