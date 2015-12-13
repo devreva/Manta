@@ -1,0 +1,17 @@
+<div ng-controller="TicketCtrl">
+  <h2>チケット登録</h2>
+  <form>
+    <legend>チケット登録</legend>
+    <label>タイトル</label>
+    <input type="text" id="title" name="title" ng-model="ticket.title">
+    <button class="btn btn-primary" ng-click="createTicket()">登録</button>
+  </form>
+
+
+  <h2>カンバン</h2>
+  <ul>
+    <li ng:repeat="ticket in tickets">
+      <label>{{ticket.title}}</label>
+    </li>
+  </ul>
+</div>
