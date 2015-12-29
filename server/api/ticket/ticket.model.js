@@ -4,7 +4,7 @@ var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 var Schema = mongoose.Schema;
 
 var TicketSchema = new Schema({
-    title: String,
+  title: String,
   description: String
 });
 

@@ -50,7 +50,7 @@ var config = {
   // See the full list at https://github.com/jasmine/jasmine-npm
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000,
-    print: function() {}  // for jasmine-spec-reporter
+    print: function() {} // for jasmine-spec-reporter
   },
 
   // Prepare environment for tests
@@ -62,13 +62,20 @@ var config = {
     require('babel-core/register');
     var SpecReporter = require('jasmine-spec-reporter');
     // add jasmine spec reporter
-    jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: true}));
+    jasmine.getEnv().addReporter(new SpecReporter({
+      displayStacktrace: true
+    }));
 
     var serverConfig = config.params.serverConfig;
 
     // Setup mongo for tests
     var mongoose = require('mongoose');
     mongoose.connect(serverConfig.mongo.uri, serverConfig.mongo.options); // Connect to database
+    // Drop database for tests
+    mongoose.connection.on('open', function() {
+      mongoose.connection.db.dropDatabase();
+      console.log('dropped database');
+    });
   }
 };
 

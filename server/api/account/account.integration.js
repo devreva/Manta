@@ -35,8 +35,7 @@ describe('Account API:', function() {
       request(app)
         .post('/api/accounts')
         .send({
-          name: 'New Account',
-          info: 'This is the brand new account!!!'
+          name: 'New Account'
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -51,7 +50,6 @@ describe('Account API:', function() {
 
     it('should respond with the newly created account', function() {
       newAccount.name.should.equal('New Account');
-      newAccount.info.should.equal('This is the brand new account!!!');
     });
 
   });
@@ -79,7 +77,6 @@ describe('Account API:', function() {
 
     it('should respond with the requested account', function() {
       account.name.should.equal('New Account');
-      account.info.should.equal('This is the brand new account!!!');
     });
 
   });
@@ -91,8 +88,7 @@ describe('Account API:', function() {
       request(app)
         .put('/api/accounts/' + newAccount._id)
         .send({
-          name: 'Updated Account',
-          info: 'This is the updated account!!!'
+          name: 'Updated Account'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -111,7 +107,6 @@ describe('Account API:', function() {
 
     it('should respond with the updated account', function() {
       updatedAccount.name.should.equal('Updated Account');
-      updatedAccount.info.should.equal('This is the updated account!!!');
     });
 
   });
