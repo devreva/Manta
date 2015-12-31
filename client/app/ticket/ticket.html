@@ -1,17 +1,91 @@
 <div ng-controller="TicketCtrl">
-  <h2>チケット登録</h2>
-  <form>
-    <legend>チケット登録</legend>
-    <label>タイトル</label>
-    <input type="text" id="title" name="title" ng-model="ticket.title">
-    <button class="btn btn-primary" ng-click="createTicket()">登録</button>
-  </form>
-
-
-  <h2>カンバン</h2>
-  <ul>
-    <li ng:repeat="ticket in tickets">
-      <label>{{ticket.title}}</label>
-    </li>
-  </ul>
-</div>
+  <div class="container">
+    <table class="table">
+      <h2>チケット登録</h2>
+      <form>
+        <legend>チケット登録</legend>
+        <label>タイトル</label>
+        <input type="text" id="title" name="title" ng-model="ticket.title">
+        <button class="btn btn-primary" ng-click="createTicket()">登録</button>
+      </form>
+    </table>
+    <div class="container">
+      <div class="taskListContainer">
+        <!-- タスクリスト Todo-->
+        <div class="taskList">
+          <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead＞ <!--　枠ヘッダータイトル　-->
+              <tr class="info">
+                <th>Todo</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul ng:repeat="ticket in tickets">
+                      <label>{{ticket.title}}</label>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        <!-- タスクリスト  Next-->
+        <div class="taskList">
+          <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead＞ <!--　枠ヘッダータイトル　-->
+              <tr class="info">
+                <th>Next</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul ng:repeat="ticket in tickets">
+                      <label>{{ticket.title}}</label>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        <!-- タスクリスト  Now-->
+        <div class="taskList">
+          <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead＞ <!--　枠ヘッダータイトル　-->
+              <tr class="info">
+                <th>Now</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul ng:repeat="ticket in tickets">
+                      <label>{{ticket.title}}</label>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        <!-- タスクリスト  Finished-->
+        <div class="taskList">
+          <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead＞ <!--　枠ヘッダータイトル　-->
+              <tr class="info">
+                <th>Finished</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul ng:repeat="ticket in tickets">
+                      <label>{{ticket.title}}</label>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
