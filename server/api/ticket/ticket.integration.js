@@ -35,8 +35,8 @@ describe('Ticket API:', function() {
       request(app)
         .post('/api/tickets')
         .send({
-          name: 'New Ticket',
-          info: 'This is the brand new ticket!!!'
+          title: 'New Ticket',
+          description: 'This is the brand new ticket!!!'
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -50,8 +50,8 @@ describe('Ticket API:', function() {
     });
 
     it('should respond with the newly created ticket', function() {
-      newTicket.name.should.equal('New Ticket');
-      newTicket.info.should.equal('This is the brand new ticket!!!');
+      newTicket.title.should.equal('New Ticket');
+      newTicket.description.should.equal('This is the brand new ticket!!!');
     });
 
   });
@@ -78,8 +78,8 @@ describe('Ticket API:', function() {
     });
 
     it('should respond with the requested ticket', function() {
-      ticket.name.should.equal('New Ticket');
-      ticket.info.should.equal('This is the brand new ticket!!!');
+      ticket.title.should.equal('New Ticket');
+      ticket.description.should.equal('This is the brand new ticket!!!');
     });
 
   });
@@ -91,8 +91,8 @@ describe('Ticket API:', function() {
       request(app)
         .put('/api/tickets/' + newTicket._id)
         .send({
-          name: 'Updated Ticket',
-          info: 'This is the updated ticket!!!'
+          title: 'Updated Ticket',
+          description: 'This is the updated ticket!!!'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -110,8 +110,8 @@ describe('Ticket API:', function() {
     });
 
     it('should respond with the updated ticket', function() {
-      updatedTicket.name.should.equal('Updated Ticket');
-      updatedTicket.info.should.equal('This is the updated ticket!!!');
+      updatedTicket.title.should.equal('Updated Ticket');
+      updatedTicket.description.should.equal('This is the updated ticket!!!');
     });
 
   });
