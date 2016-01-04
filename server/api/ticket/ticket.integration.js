@@ -36,7 +36,8 @@ describe('Ticket API:', function() {
         .post('/api/tickets')
         .send({
           title: 'New Ticket',
-          description: 'This is the brand new ticket!!!'
+          description: 'This is the brand new ticket!!!',
+          status: 0
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -80,6 +81,7 @@ describe('Ticket API:', function() {
     it('should respond with the requested ticket', function() {
       ticket.title.should.equal('New Ticket');
       ticket.description.should.equal('This is the brand new ticket!!!');
+      status: 0
     });
 
   });
@@ -92,7 +94,8 @@ describe('Ticket API:', function() {
         .put('/api/tickets/' + newTicket._id)
         .send({
           title: 'Updated Ticket',
-          description: 'This is the updated ticket!!!'
+          description: 'This is the updated ticket!!!',
+          status: 1
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -112,6 +115,8 @@ describe('Ticket API:', function() {
     it('should respond with the updated ticket', function() {
       updatedTicket.title.should.equal('Updated Ticket');
       updatedTicket.description.should.equal('This is the updated ticket!!!');
+      updatedTicket.status.should.equal(1);
+
     });
 
   });

@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 
 var TicketSchema = new Schema({
   title: String,
-  description: String
+  description: String,
+  status: Number
 });
 
 module.exports = mongoose.model('Ticket', TicketSchema);

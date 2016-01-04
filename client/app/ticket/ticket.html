@@ -12,75 +12,18 @@
     <div class="container">
       <div class="taskListContainer">
         <!-- タスクリスト Todo-->
-        <div class="taskList">
+        <div class="taskList" ng:repeat="items in tickets">
           <table class="table table-striped table-bordered table-hover table-condensed">
             <thead＞ <!--　枠ヘッダータイトル　-->
               <tr class="info">
-                <th>Todo</th>
+                <th>{{statusName[$index]}}</th>
               </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
-                    <ul ng:repeat="ticket in tickets">
-                      <label>{{ticket.title}}</label>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-          </table>
-        </div>
-        <!-- タスクリスト  Next-->
-        <div class="taskList">
-          <table class="table table-striped table-bordered table-hover table-condensed">
-            <thead＞ <!--　枠ヘッダータイトル　-->
-              <tr class="info">
-                <th>Next</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <ul ng:repeat="ticket in tickets">
-                      <label>{{ticket.title}}</label>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-          </table>
-        </div>
-        <!-- タスクリスト  Now-->
-        <div class="taskList">
-          <table class="table table-striped table-bordered table-hover table-condensed">
-            <thead＞ <!--　枠ヘッダータイトル　-->
-              <tr class="info">
-                <th>Now</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <ul ng:repeat="ticket in tickets">
-                      <label>{{ticket.title}}</label>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-          </table>
-        </div>
-        <!-- タスクリスト  Finished-->
-        <div class="taskList">
-          <table class="table table-striped table-bordered table-hover table-condensed">
-            <thead＞ <!--　枠ヘッダータイトル　-->
-              <tr class="info">
-                <th>Finished</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <ul ng:repeat="ticket in tickets">
-                      <label>{{ticket.title}}</label>
+                    <ul ng:repeat="item in items">
+                      <label>{{item.title}}</label>
                     </ul>
                   </td>
                 </tr>
