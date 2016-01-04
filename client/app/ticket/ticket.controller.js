@@ -30,4 +30,12 @@ angular.module('mantaApp')
         });
       }
     };
+
+    $scope.onDrop = function(status) {
+      if (this.item._id) {
+        $http.put('/api/tickets/' + this.item._id, {
+          status: this.$parent.$index
+        });
+      }
+    };
   });
