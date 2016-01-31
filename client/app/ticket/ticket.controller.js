@@ -3,7 +3,7 @@
 
 angular.module('mantaApp')
   .controller('TicketCtrl', function($scope, $http, socket) {
-    $scope.statusName = ['Todo', 'Next', 'Now', 'Finished'];
+    $scope.statusNames = ['Todo', 'Next', 'Now', 'Finished'];
     $http.get('/api/tickets').success(function(tickets) {
       $scope.showTickets(tickets);
       $scope.syncTickets = tickets;
@@ -31,10 +31,10 @@ angular.module('mantaApp')
       }
     };
 
-    $scope.onDrop = function(status) {
+    $scope.onDrop = function(event, ui, status) {
       if (this.item._id) {
         $http.put('/api/tickets/' + this.item._id, {
-          status: this.$parent.$index
+          status: status
         });
       }
     };

@@ -1,19 +1,15 @@
 @charset "utf-8";
-
-$TASK_LIST_CONTAINER_WIDTH : 100%;
-$TASK_LIST_WIDTH       : 310px;
-$TASK_LIST_MARGIN_RITHGT      : 30px;
-
-
+$TASK_LIST_CONTAINER_WIDTH: 100%;
+$TASK_LIST_WIDTH: 20%;
+$TASK_LIST_MARGIN_RITHGT: 5%;
 .taskListContainer {
-   white-space: nowrap;
-   width: $TASK_LIST_CONTAINER_WIDTH;
-   overflow: auto;
+  white-space: nowrap;
+  width: $TASK_LIST_CONTAINER_WIDTH;
+  overflow: auto;
 }
-
 .taskList {
-    display: inline-block;
-    width: $TASK_LIST_WIDTH;
-    margin-right: $TASK_LIST_MARGIN_RITHGT;
-
+  vertical-align: top;
+  display: inline-block;
+  width: $TASK_LIST_WIDTH;
+  margin-right: $TASK_LIST_MARGIN_RITHGT;
 }
