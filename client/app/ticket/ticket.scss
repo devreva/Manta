@@ -12,4 +12,16 @@ $TASK_LIST_MARGIN_RITHGT: 5%;
   display: inline-block;
   width: $TASK_LIST_WIDTH;
   margin-right: $TASK_LIST_MARGIN_RITHGT;
+  table {
+    tbody {
+      tr {
+        td {
+          transition: font-size 0.075s ease-in;
+          &:hover {
+            font-size: 200%;
+          }
+        }
+      }
+    }
+  }
 }
