@@ -18,7 +18,8 @@ module.exports = function (grunt) {
     protractor: 'grunt-protractor-runner',
     buildcontrol: 'grunt-build-control',
     istanbul_check_coverage: 'grunt-mocha-istanbul',
-    ngconstant: 'grunt-ng-constant'
+    ngconstant: 'grunt-ng-constant',
+    postcss: 'grunt-postcss'
   });
 
   // Time how long tasks take. Can help when optimizing build times
