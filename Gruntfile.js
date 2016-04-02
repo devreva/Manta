@@ -484,7 +484,9 @@ module.exports = function (grunt) {
           reporter: 'spec',
           require: ['mocha.conf.js'],
           mask: '**/*.spec.js',
-          coverageFolder: 'coverage/server/unit'
+          coverageFolder: 'coverage/server/unit',
+          reporter: 'mocha-jenkins-reporter',
+          reportFormats: [ 'cobertura', 'lcov' ]
         },
         src: '<%= yeoman.server %>'
       },
@@ -494,7 +496,9 @@ module.exports = function (grunt) {
           reporter: 'spec',
           require: ['mocha.conf.js'],
           mask: '**/*.integration.js',
-          coverageFolder: 'coverage/server/integration'
+          coverageFolder: 'coverage/server/integration',
+          reporter: 'mocha-jenkins-reporter',
+          reportFormats: [ 'cobertura', 'lcov' ]
         },
         src: '<%= yeoman.server %>'
       }
@@ -529,7 +533,8 @@ module.exports = function (grunt) {
 
     env: {
       test: {
-        NODE_ENV: 'test'
+        NODE_ENV: 'test',
+        JUNIT_REPORT_PATH: 'coverage/test-results.xml'
       },
       prod: {
         NODE_ENV: 'production'

@@ -1,0 +1,86 @@
+<testsuites name="Mocha Tests">
+<testsuite name="Account API Router:" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.003">
+<testcase classname="Account API Router:" name="should return an express router instance" time="0.001">
+</testcase>
+</testsuite>
+<testsuite name="Account API Router: GET /api/accounts" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.002">
+<testcase classname="Account API Router: GET /api/accounts" name="should route to account.controller.index" time="0.001">
+</testcase>
+</testsuite>
+<testsuite name="Account API Router: GET /api/accounts/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0">
+<testcase classname="Account API Router: GET /api/accounts/:id" name="should route to account.controller.show">
+</testcase>
+</testsuite>
+<testsuite name="Account API Router: POST /api/accounts" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Account API Router: POST /api/accounts" name="should route to account.controller.create">
+</testcase>
+</testsuite>
+<testsuite name="Account API Router: PUT /api/accounts/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Account API Router: PUT /api/accounts/:id" name="should route to account.controller.update" time="0.001">
+</testcase>
+</testsuite>
+<testsuite name="Account API Router: PATCH /api/accounts/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0">
+<testcase classname="Account API Router: PATCH /api/accounts/:id" name="should route to account.controller.update">
+</testcase>
+</testsuite>
+<testsuite name="Account API Router: DELETE /api/accounts/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Account API Router: DELETE /api/accounts/:id" name="should route to account.controller.destroy">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router:" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0">
+<testcase classname="Thing API Router:" name="should return an express router instance">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router: GET /api/things" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Thing API Router: GET /api/things" name="should route to thing.controller.index">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router: GET /api/things/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Thing API Router: GET /api/things/:id" name="should route to thing.controller.show" time="0.001">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router: POST /api/things" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.002">
+<testcase classname="Thing API Router: POST /api/things" name="should route to thing.controller.create">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router: PUT /api/things/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Thing API Router: PUT /api/things/:id" name="should route to thing.controller.update">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router: PATCH /api/things/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Thing API Router: PATCH /api/things/:id" name="should route to thing.controller.update">
+</testcase>
+</testsuite>
+<testsuite name="Thing API Router: DELETE /api/things/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Thing API Router: DELETE /api/things/:id" name="should route to thing.controller.destroy" time="0.001">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router:" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0">
+<testcase classname="Ticket API Router:" name="should return an express router instance">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router: GET /api/tickets" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0">
+<testcase classname="Ticket API Router: GET /api/tickets" name="should route to ticket.controller.index">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router: GET /api/tickets/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.002">
+<testcase classname="Ticket API Router: GET /api/tickets/:id" name="should route to ticket.controller.show" time="0.001">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router: POST /api/tickets" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.005">
+<testcase classname="Ticket API Router: POST /api/tickets" name="should route to ticket.controller.create">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router: PUT /api/tickets/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.002">
+<testcase classname="Ticket API Router: PUT /api/tickets/:id" name="should route to ticket.controller.update">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router: PATCH /api/tickets/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Ticket API Router: PATCH /api/tickets/:id" name="should route to ticket.controller.update">
+</testcase>
+</testsuite>
+<testsuite name="Ticket API Router: DELETE /api/tickets/:id" tests="1" failures="0" skipped="0" timestamp="Sat, 02 Apr 2016 06:07:29 GMT" time="0.001">
+<testcase classname="Ticket API Router: DELETE /api/tickets/:id" name="should route to ticket.controller.destroy" time="0.001">
+</testcase>
+</testsuite>
+</testsuites>
