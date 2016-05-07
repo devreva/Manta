@@ -73,7 +73,21 @@ module.exports = function(config) {
     // - junit
     // - growl
     // - coverage
-    reporters: ['spec'],
+    reporters: ['spec', 'junit', 'coverage'],
+
+    junitReporter: {
+      outputFile: '../coverage/client/unit/test-results.xml'
+    },
+    // optionally, configure the reporter
+    coverageReporter: {
+      dir: 'coverage/client/unit/',
+      reporters: [{
+        type: 'html'
+      }, { // jenkins xml
+        type: 'cobertura',
+        file: 'cobertura-coverage.xml'
+      }]
+    },
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
