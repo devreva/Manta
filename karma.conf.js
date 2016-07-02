@@ -73,7 +73,7 @@ module.exports = function(config) {
     // - junit
     // - growl
     // - coverage
-    reporters: ['progress', 'junit', 'coverage'],
+    reporters: ['spec', 'junit', 'coverage'],
 
     junitReporter: {
       outputFile: '../coverage/client/unit/test-results.xml'

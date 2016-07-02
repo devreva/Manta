@@ -32,7 +32,8 @@ var config = {
   // and
   // https://code.google.com/p/selenium/source/browse/javascript/webdriver/capabilities.js
   capabilities: {
-    'browserName': 'chrome',
+    'browserName': 'phantomjs',
+    'phantomjs.binary.path': './node_modules/.bin/phantomjs',
     'name': 'Fullstack E2E',
     'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
     'build': process.env.TRAVIS_BUILD_NUMBER

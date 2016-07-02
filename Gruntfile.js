@@ -522,6 +522,13 @@ module.exports = function (grunt) {
       options: {
         configFile: 'protractor.conf.js'
       },
+      phantomjs: {
+        options: {
+          args: {
+            browser: 'phantomjs'
+          }
+        }
+      },
       chrome: {
         options: {
           args: {
@@ -746,6 +753,21 @@ module.exports = function (grunt) {
         ]);
       }
 
+      else if (option === 'ci') {
+        return grunt.task.run([
+          'clean:server',
+          'env:all',
+          'env:test',
+          'concurrent:pre',
+          'concurrent:test',
+          'injector',
+          'wiredep:client',
+          'postcss',
+          'express:dev',
+          'protractor:phantomjs'
+        ]);
+      }
+
       else {
         return grunt.task.run([
           'clean:server',
@@ -757,7 +779,7 @@ module.exports = function (grunt) {
           'wiredep:client',
           'postcss',
           'express:dev',
-          'protractor'
+          'protractor:chrome'
         ]);
       }
     }
