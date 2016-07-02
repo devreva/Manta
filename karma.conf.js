@@ -34,7 +34,7 @@ module.exports = function(config) {
 
     preprocessors: {
       '**/*.html': 'ng-html2js',
-      'client/{app,components}/**/*.js': 'babel'
+      'client/{app,components}/**/*.js': ['babel', 'coverage']
     },
 
     ngHtml2JsPreprocessor: {
@@ -73,7 +73,7 @@ module.exports = function(config) {
     // - junit
     // - growl
     // - coverage
-    reporters: ['spec', 'junit', 'coverage'],
+    reporters: ['progress', 'junit', 'coverage'],
 
     junitReporter: {
       outputFile: '../coverage/client/unit/test-results.xml'
