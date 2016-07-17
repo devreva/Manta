@@ -76,11 +76,11 @@ module.exports = function(config) {
     reporters: ['spec', 'junit', 'coverage'],
 
     junitReporter: {
-      outputFile: '../coverage/client/unit/test-results.xml'
+      outputFile: '../test_results/client/unit/test-results.xml'
     },
     // optionally, configure the reporter
     coverageReporter: {
-      dir: 'coverage/client/unit/',
+      dir: 'test_results/client/unit/',
       reporters: [{
         type: 'html'
       }, { // jenkins xml

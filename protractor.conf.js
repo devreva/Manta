@@ -67,6 +67,11 @@ var config = {
       displayStacktrace: true
     }));
 
+    var jasmineReporters = require('jasmine-reporters');
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+      savePath: 'test_results/e2e/'
+    }));
+
     var serverConfig = config.params.serverConfig;
 
     // Setup mongo for tests

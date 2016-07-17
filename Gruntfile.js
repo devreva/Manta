@@ -484,7 +484,7 @@ module.exports = function (grunt) {
           reporter: 'spec',
           require: ['mocha.conf.js'],
           mask: '**/*.spec.js',
-          coverageFolder: 'coverage/server/unit',
+          coverageFolder: 'test_results/server/unit',
           reporter: 'mocha-jenkins-reporter',
           reportFormats: [ 'cobertura', 'lcov' ]
         },
@@ -496,7 +496,7 @@ module.exports = function (grunt) {
           reporter: 'spec',
           require: ['mocha.conf.js'],
           mask: '**/*.integration.js',
-          coverageFolder: 'coverage/server/integration',
+          coverageFolder: 'test_results/server/integration',
           reporter: 'mocha-jenkins-reporter',
           reportFormats: [ 'cobertura', 'lcov' ]
         },
@@ -507,7 +507,7 @@ module.exports = function (grunt) {
     istanbul_check_coverage: {
       default: {
         options: {
-          coverageFolder: 'coverage/**',
+          coverageFolder: 'test_results/**',
           check: {
             lines: 80,
             statements: 80,
@@ -541,7 +541,7 @@ module.exports = function (grunt) {
     env: {
       test: {
         NODE_ENV: 'test',
-        JUNIT_REPORT_PATH: 'coverage/test-results.xml'
+        JUNIT_REPORT_PATH: 'test_results/server/test-results.xml'
       },
       prod: {
         NODE_ENV: 'production'
