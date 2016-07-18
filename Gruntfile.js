@@ -476,7 +476,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.server %>/**/*.integration.js']
       }
     },
-
+    
     mocha_istanbul: {
       unit: {
         options: {
